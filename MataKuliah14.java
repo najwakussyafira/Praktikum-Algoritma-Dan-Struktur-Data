@@ -6,10 +6,6 @@ public class MataKuliah14 {
     
         // Konstruktor default
         public MataKuliah14() {
-            this.kodeMK = "";
-            this.nama = "";
-            this.sks = 0;
-            this.jumlahJam = 0;
         }
     
         // Konstruktor berparameter
@@ -22,8 +18,10 @@ public class MataKuliah14 {
     
         // Method untuk menampilkan informasi
         void tampilInformasi() {
-            System.out.println("Kode Mata Kuliah: " + kodeMK);
+            System.out.println();
+            System.out.println("Informasi Mata Kuliah");
             System.out.println("Nama Mata Kuliah: " + nama);
+            System.out.println("Kode Mata Kuliah: " + kodeMK);
             System.out.println("SKS: " + sks);
             System.out.println("Jumlah Jam: " + jumlahJam);
         }
@@ -31,21 +29,25 @@ public class MataKuliah14 {
         // Method untuk mengubah SKS
         void ubahSKS(int sksBaru) {
             this.sks = sksBaru;
+            System.out.println();
             System.out.println("SKS telah diubah menjadi: " + sksBaru);
         }
     
         // Method untuk menambah jam
         void tambahJam(int jam) {
             this.jumlahJam += jam;
+            System.out.println();
             System.out.println("Jumlah Jam telah ditambah. Jam sekarang: " + jumlahJam);
         }
     
         // Method untuk mengurangi jam
         void kurangiJam(int jam) {
-            if (this.jumlahJam >= jam) {
-                this.jumlahJam -= jam;
+            if (this.jumlahJam <= jam) {
+                System.out.println();
                 System.out.println("Jumlah Jam telah dikurangi. Jam sekarang: " + jumlahJam);
             } else {
+                jumlahJam -= jam;
+                System.out.println();
                 System.out.println("Jumlah jam tidak mencukupi untuk dikurangi.");
             }
         }
