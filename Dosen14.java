@@ -8,48 +8,47 @@ public class Dosen14 {
      String bidangKeahlianBaru;
      boolean statusAktif;
 
+ // Konstruktor Default
+ public Dosen14() {
+}
 
- public void tampilInformasi() {
-         System.out.println("Nama Dosen: " + nama);
-         System.out.println("ID Dosen: " + idDosen);
-         System.out.println("Tahun Bergabung: " + tahunBergabung);
-         System.out.println("Bidang Keahlian: " + bidangKeahlian);
-         System.out.println("Status Aktif: " + statusAktif);
-         System.out.println("Masa Kerja: " + nama + ":" + masaKerja);
+// Konstruktor Berparameter
+public Dosen14(String id, String nm, boolean statusAktif, int tahunBergabung, String bidangKeahlian) {
+    nm = nama;
+    id = idDosen;
+    this.statusAktif = statusAktif;
+    this.tahunBergabung = tahunBergabung;
+    this.bidangKeahlian = bidangKeahlian;
+}
 
-     // Konstruktor default
-     public Dosen14() {
-         this.idDosen = "Unknown";
-         this.nama = "Unknown";
-         this.statusAktif = false;
-         this.tahunBergabung = 0;
-         this.bidangKeahlian = "Unknown";
-     }
- 
-     // Konstruktor berparameter
-     public Dosen14(String idDosen, String nama, boolean statusAktif, int tahunBergabung, String bidangKeahlian) {
-         this.idDosen = idDosen;
-         this.nama = nama;
-         this.statusAktif = statusAktif;
-         this.tahunBergabung = tahunBergabung;
-         this.bidangKeahlian = bidangKeahlian;
-     }
- 
-    
-     }
- 
-     // Method setStatusAktif(status: boolean)
-     public void setStatusAktif(boolean status) {
-         this.statusAktif = status;
-     }
- 
-     // Method hitungMasaKerja(thnSkrg: int): int
-     public int hitungMasaKerja(int thnSkrg) {
-         return thnSkrg - this.tahunBergabung;
-     }
- 
-     // Method ubahKeahlian(bidang: String)
-     public void ubahKeahlian(String bidang) {
-         this.bidangKeahlian = bidang;
-     }
+// Method tampilInformasi
+public void tampilInformasi() {
+    System.out.println("ID Dosen: " + this.idDosen);
+    System.out.println("Nama: " + this.nama);
+    System.out.println("Status Aktif: " + (this.statusAktif ? "Aktif" : "Tidak Aktif"));
+    System.out.println("Tahun Bergabung: " + this.tahunBergabung);
+    System.out.println("Bidang Keahlian: " + this.bidangKeahlian);
+}
+
+// Method setStatusAktif
+public void setStatusAktif(boolean statusAktif) {
+    if (2025 - tahunBergabung == 35) {
+        statusAktif = false;
+        System.out.println();
+        System.out.println("Dosen " + nama + " tidak aktif ");
+    } else {
+        statusAktif = true; 
+        System.out.println();
+        System.out.println("Dosen " + nama + " aktif ");
+    }
+}
+// Method hitungMasaKerja
+public int hitungMasaKerja(int thnSkrg) {
+    return masaKerja = thnSkrg - this.tahunBergabung;
+}
+
+// Method ubahKeahlian
+public void ubahKeahlian(String bidang) {
+    this.bidangKeahlian = bidangKeahlianBaru;
+}
 }
