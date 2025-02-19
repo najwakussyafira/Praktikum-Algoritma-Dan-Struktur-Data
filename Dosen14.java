@@ -34,11 +34,9 @@ public void tampilInformasi() {
 public void setStatusAktif(boolean statusAktif) {
     if (2025 - tahunBergabung == 35) {
         statusAktif = false;
-        System.out.println();
         System.out.println("Dosen " + nama + " tidak aktif ");
     } else {
         statusAktif = true; 
-        System.out.println();
         System.out.println("Dosen " + nama + " aktif ");
     }
 }
@@ -49,6 +47,6 @@ public int hitungMasaKerja(int thnSkrg) {
 
 // Method ubahKeahlian
 public void ubahKeahlian(String bidang) {
-    this.bidangKeahlian = bidangKeahlianBaru;
+    this.bidangKeahlian = bidang;
 }
 }
