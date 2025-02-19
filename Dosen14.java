@@ -2,10 +2,21 @@ public class Dosen14 {
      // Atribut
      String idDosen;
      String nama;
-     boolean statusAktif;
      int tahunBergabung;
+     int masaKerja;
      String bidangKeahlian;
- 
+     String bidangKeahlianBaru;
+     boolean statusAktif;
+
+
+ public void tampilInformasi() {
+         System.out.println("Nama Dosen: " + nama);
+         System.out.println("ID Dosen: " + idDosen);
+         System.out.println("Tahun Bergabung: " + tahunBergabung);
+         System.out.println("Bidang Keahlian: " + bidangKeahlian);
+         System.out.println("Status Aktif: " + statusAktif);
+         System.out.println("Masa Kerja: " + nama + ":" + masaKerja);
+
      // Konstruktor default
      public Dosen14() {
          this.idDosen = "Unknown";
@@ -24,13 +35,7 @@ public class Dosen14 {
          this.bidangKeahlian = bidangKeahlian;
      }
  
-     // Method tampilInformasi()
-     public void tampilInformasi() {
-         System.out.println("ID Dosen: " + idDosen);
-         System.out.println("Nama: " + nama);
-         System.out.println("Status Aktif: " + (statusAktif ? "Aktif" : "Tidak Aktif"));
-         System.out.println("Tahun Bergabung: " + tahunBergabung);
-         System.out.println("Bidang Keahlian: " + bidangKeahlian);
+    
      }
  
      // Method setStatusAktif(status: boolean)
